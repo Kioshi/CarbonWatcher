@@ -55,12 +55,14 @@ class MainActivity : AppCompatActivity() {
         GlobalScope.launch {
             db.clearAllTables()
 
-            val denmarkTomato = ProducingCarbonData(1, "tomato", "DK", 10.3)
-            val spainTomato = ProducingCarbonData(2, "tomato", "IT", 2.4)
+            val denmarkTomato = ProducingCarbonData(0, "Tomato", "DK", 10.3)
+            val spainTomato = ProducingCarbonData(0, "Tomato", "IT", 2.4)
+            val denmarkOrange = ProducingCarbonData(0, "Orange", "DK", 17.3)
+            val spainOrange = ProducingCarbonData(0, "Orange", "IT", 4.4)
 
-            db.CarbonDao().insertAllData(denmarkTomato, spainTomato)
-            db.CarbonDao().insertAll(ProductTypes(1, "Sunmators", 123456, 1000, spainTomato),
-                ProductTypes(2, "Rainmators", 654321, 1000, denmarkTomato))
+            db.CarbonDao().insertAllData(denmarkTomato, spainTomato, denmarkOrange, spainOrange)
+            db.CarbonDao().insertAll(ProductTypes(1, "Sunmatos", 123456, 1000, spainTomato),
+                ProductTypes(2, "Rainmatos", 654321, 1000, denmarkTomato))
 
             db.CarbonDao().insertAllPath(TransportationCarbon(0, "DK", "DK", 0.8),
                 TransportationCarbon(0, "IT", "DK", 17.3),
