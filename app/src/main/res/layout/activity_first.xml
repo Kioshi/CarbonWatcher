@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstActivity">
+
+    <SearchView
+        android:id="@+id/productSearch"
+        android:layout_width="395dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:foregroundTint="#C0C0C0"
+
+        android:iconifiedByDefault="true"
+        android:onClick="searchClicked"
+        android:queryHint="product name"
+        android:visibility="visible"
+        app:layout_anchorGravity="top|center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showAsAction="always"
+        tools:visibility="visible">
+
+    </SearchView>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_weight="1"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productSearch" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:backgroundTint="#8BC34A"
+        android:onClick="scanClicked"
+        android:text="@string/scan"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productSearch" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

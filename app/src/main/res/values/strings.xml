@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CarbonWatcher</string>
+    <string name="title_activity_first">FirstActivity</string>
+    <string name="scan">scan</string>
+    <string name="search_result">Search Result</string>
+    <string name="scan_existing_product">Scanned product exists in database</string>
+    <string name="scan_new_product">Scanned product is not yet in the database!</string>
 </resources>

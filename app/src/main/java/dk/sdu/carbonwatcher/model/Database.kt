@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [ProducingCarbonData::class, TransportationCarbon::class, ProductTypes::class],
-    version = 1
+    version = 2
 )
 abstract class AppDatabase : RoomDatabase(){
     abstract fun CarbonDao(): CarbonDao
@@ -21,7 +21,7 @@ abstract class AppDatabase : RoomDatabase(){
         }
 
         private fun buildDatabase(context: Context) = Room.databaseBuilder(context,
-            AppDatabase::class.java, "carbon.db")
+            AppDatabase::class.java, "carbon2.db")
             .build()
     }
 }

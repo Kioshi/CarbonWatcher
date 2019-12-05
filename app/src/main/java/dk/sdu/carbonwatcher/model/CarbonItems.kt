@@ -28,7 +28,7 @@ data class ProductTypes(
     @PrimaryKey(autoGenerate = true)
     val type_id: Long,
     val name: String,
-    val barcode: Long,
+    val barcode: String,
     val weight: Long,
     @Embedded
     val productDataz: ProducingCarbonData

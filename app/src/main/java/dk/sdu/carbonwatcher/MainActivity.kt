@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
             val spainOrange = ProducingCarbonData(0, "Orange", "IT", 4.4)
 
             db.CarbonDao().insertAllData(denmarkTomato, spainTomato, denmarkOrange, spainOrange)
-            db.CarbonDao().insertAll(ProductTypes(1, "Sunmatos", 123456, 1000, spainTomato),
-                ProductTypes(2, "Rainmatos", 654321, 1000, denmarkTomato))
+            db.CarbonDao().insertAll(ProductTypes(1, "Sunmatos", "123456", 1000, spainTomato),
+                ProductTypes(2, "Rainmatos", "654321", 1000, denmarkTomato))
 
             db.CarbonDao().insertAllPath(TransportationCarbon(0, "DK", "DK", 0.8),
                 TransportationCarbon(0, "IT", "DK", 17.3),
@@ -153,7 +153,7 @@ class MainActivity : AppCompatActivity() {
                                 val productType = db.CarbonDao().findType((country.selectedItem as Locale).country, type.selectedItem.toString());
                                 if (productType != null)
                                 {
-                                    db.CarbonDao().insertAll(ProductTypes(0, name.text.toString(), barcode.text.toString().toLong(), weight.text.toString().toLong(), productType))
+                                    db.CarbonDao().insertAll(ProductTypes(0, name.text.toString(), barcode.text.toString(), weight.text.toString().toLong(), productType))
 
                                 }
                                 GlobalScope.launch(Dispatchers.Main) {
